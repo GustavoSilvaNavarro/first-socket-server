@@ -3,6 +3,7 @@ const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
 const path = require('path');
+const cors = require('cors');
 const Sockets = require('./sockets');
 
 //METHODS AND CLASSES FOR THE SERVER
@@ -16,6 +17,9 @@ class Server {
     }
 
     middlewares() {
+        //CORS CONNECTIVITY WITH OTHER SERVER OR DOMINIOS
+        this.app.use(cors());
+
         //STATIC FILES - USE PUBLIC DIRECTORY
         this.app.use(express.static(path.resolve(__dirname, '../public')));
     }

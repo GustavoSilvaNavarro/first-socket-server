@@ -1,5 +1,5 @@
 //START CONNECTION USING OBJECT IO
-const socket = io('https://socket-server-backend.herokuapp.com/'); //se va a conectar al dominio en este caso al localhost y le debo dar la ruta donde se va a dar la coneccion en tiempo real / Genero mismo id en el servidor y en el frontend asi saben que es el mismo
+const socket = io('http://localhost:3000'); //se va a conectar al dominio en este caso al localhost y le debo dar la ruta donde se va a dar la coneccion en tiempo real / Genero mismo id en el servidor y en el frontend asi saben que es el mismo
 
 //REFERENCING DOM ELEMENTS - HTML
 const form = document.querySelector('#myForm');
